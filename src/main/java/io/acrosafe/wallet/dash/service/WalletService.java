@@ -104,6 +104,7 @@ public class WalletService
     // Logger
     private static final Logger logger = LoggerFactory.getLogger(WalletService.class);
 
+    // TODO: will update the path to dash later
     private static final ImmutableList<ChildNumber> BIP44_ACCOUNT_BTC_PATH =
             ImmutableList.of(new ChildNumber(44, true), new ChildNumber(0, true), ChildNumber.ZERO_HARDENED);
 

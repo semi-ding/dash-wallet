@@ -1,8 +1,13 @@
 # dash-wallet (V1 ready)
-Spring Boot based 2-of-3 multisig wallet implementation for DASH. If you find any problem, please open an issue.
+Spring Boot based 2-of-3 multisig wallet implementation for DASH. If you want to support the project, please donate to the following DASH address: XgRHmsDYQ64co2EuV93pUsM86Pa4PGzQkF
 
 ## Dashj-BLS lib
 libdashjbls.so is in etc folder, copy it to folder in path or set java.library.path pointing to it.
+
+## Deployment
+- By default, the microservice runs as hot wallet. Keys are protected by different passphrase. 
+- Only watcher needs to be deploy if you want to set up a cold wallet.
+- If CCSS 3 standard needs to be supported, two microservice instances(watcher and signer) need to be deploy on different VM.
 
 ## Setup Development Environment
 1. Install PostgreSQL and Java 8.
@@ -11,8 +16,6 @@ libdashjbls.so is in etc folder, copy it to folder in path or set java.library.p
 4. Run dash-wallet-1.0.0-SNAPSHOT.jar by using "java -jar dash-wallet-1.0.0-SNAPSHOT.jar", If you want to run it on DASH mainnet, please use prod profile.
 5. Copy the checkpoint file in etc folder to <user_home> folder if you want to accelarate the blockchain download speed.
 6. When you see "All blocks have been downloaded. DASH wallet service is available." in your log, you system has started. It takes less than one minute if you use checkpoint. hours if not.
-
-Note: If you have problem about dash-core.jar in the pom, please add it to your maven repo manually.
 
 ## REST API 
 - **List all transactions:  GET** https://hostname:9400/api/v1/dash/wallet/{walletId}/transaction/all?pageId=0&size=100

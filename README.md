@@ -1,5 +1,5 @@
-# dash-wallet (V1 ready)
-Spring Boot based 2-of-3 multisig wallet implementation for DASH. If you want to support the project, please donate to the following DASH address: XgRHmsDYQ64co2EuV93pUsM86Pa4PGzQkF
+# dash-wallet
+Spring Boot based 2-of-3 multisig multi-user wallet and payment implementation for DASH. If you want to support the project, please donate to the following DASH address: XgRHmsDYQ64co2EuV93pUsM86Pa4PGzQkF
 
 ## Dashj-BLS lib
 libdashjbls.so is in etc folder, copy it to folder in path or set java.library.path pointing to it.
